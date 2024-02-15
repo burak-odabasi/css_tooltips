@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -17,4 +19,15 @@ body {
   background-image: url("https://source.unsplash.com/nKC772R_qog");
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.avatar::after {
+  /* content: attr(data-tooltip); */
+  content: "Thinking Cat";
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
 }
