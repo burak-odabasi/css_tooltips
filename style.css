@@ -26,8 +26,21 @@ body {
   /* content: attr(data-tooltip); */
   content: "Thinking Cat";
   position: absolute;
-  top: -2.5rem;
   left: 50%;
-  transform: translateX(-50%);
-  background: #000;
+  transform: translateX(-50%) translateY(-100%) scale(0);
+  background: #333;
+  color: white;
+  padding: 1rem;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s transform;
+  transform-origin: bottom;
+}
+
+.avatar:hover::after {
+  transform: translateX(-50%) translateY(-100%) scale(1);
+}
+
+.avatar::before {
 }
